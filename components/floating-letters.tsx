@@ -8,7 +8,6 @@ interface FloatingLetter {
   left: number
   size: number
   delay: number
-  speed: number
   rotation: number
 }
 
@@ -23,19 +22,18 @@ export default function FloatingLetters() {
       const left = Math.random() * 100
       const size = Math.random() * 30 + 20
       const delay = Math.random() * 2
-      const speed = Math.random() * 5 + 5
       const rotation = Math.random() * 360
 
-      setLetters((prev) => [...prev, { id, letter, left, size, delay, speed, rotation }])
+      setLetters((prev) => [...prev, { id, letter, left, size, delay, rotation }])
 
       setTimeout(() => {
         setLetters((prev) => prev.filter((l) => l.id !== id))
-      }, 8000) // Use a fixed timeout instead of speed * 1000
+      }, 8000)
     }
 
     const interval = setInterval(createLetter, 1000)
     return () => clearInterval(interval)
-  }, [letterOptions])
+  }, [])
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -47,7 +45,7 @@ export default function FloatingLetters() {
             left: `${letter.left}%`,
             fontSize: `${letter.size}px`,
             animationDelay: `${letter.delay}s`,
-            animationDuration: "8s", // Fixed animation duration
+            animationDuration: "8s",
             bottom: "-50px",
             transform: `rotate(${letter.rotation}deg)`,
             color: getRandomColor(),

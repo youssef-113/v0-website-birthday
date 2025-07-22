@@ -83,14 +83,14 @@ export default function HomePage() {
 
         {/* Birth Date Card */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 flex-1">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 flex-1 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25">
             <div className="text-lg text-pink-200 mb-2">Born on</div>
             <div className="text-2xl font-bold text-white mb-1">July 23, 2005</div>
             <div className="text-md text-pink-300">Saturday</div>
             <div className="text-lg text-pink-400 mt-2">♌ Leo</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 flex-1">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 flex-1 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25">
             <div className="text-lg text-pink-200 mb-2">Moon Phase</div>
             <div className="text-3xl mb-1">🌖</div>
             <div className="text-xl font-bold text-white mb-1">Waning Gibbous</div>
@@ -100,7 +100,7 @@ export default function HomePage() {
 
         {/* Age Display */}
         <div className="mb-12">
-          <div className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent leading-none">
+          <div className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent leading-none animate-pulse">
             20
           </div>
           <p className="text-xl text-pink-300 mt-4">Years of Amazing You</p>
@@ -108,18 +108,19 @@ export default function HomePage() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-3 gap-4 mb-12">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-pink-500/30">
-            <div className="text-3xl font-bold text-pink-400">{totalStats.years}</div>
-            <div className="text-sm text-pink-200">Beautiful Years</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-pink-500/30">
-            <div className="text-3xl font-bold text-pink-400">{totalStats.months}</div>
-            <div className="text-sm text-pink-200">Months of Joy</div>
-          </div>
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-pink-500/30">
-            <div className="text-3xl font-bold text-pink-400">{totalStats.days}</div>
-            <div className="text-sm text-pink-200">Days of Wonder</div>
-          </div>
+          {[
+            { label: "Beautiful Years", value: totalStats.years },
+            { label: "Months of Joy", value: totalStats.months },
+            { label: "Days of Wonder", value: totalStats.days },
+          ].map((item, index) => (
+            <div
+              key={item.label}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
+            >
+              <div className="text-3xl font-bold text-pink-400">{item.value}</div>
+              <div className="text-sm text-pink-200">{item.label}</div>
+            </div>
+          ))}
         </div>
 
         {/* Countdown */}
@@ -130,8 +131,11 @@ export default function HomePage() {
               { label: "Months", value: timeLeft.months },
               { label: "Days", value: timeLeft.days },
               { label: "Hours", value: timeLeft.hours },
-            ].map((item) => (
-              <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30">
+            ].map((item, index) => (
+              <div
+                key={item.label}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
+              >
                 <div className="text-4xl font-bold text-pink-400">{item.value}</div>
                 <div className="text-sm text-pink-200 mt-2">{item.label}</div>
               </div>
@@ -140,7 +144,7 @@ export default function HomePage() {
         </div>
 
         {/* Birthday Message */}
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-pink-500/30 mb-8">
+        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-pink-500/30 mb-8 transform transition-all duration-500 hover:scale-[1.02] hover:shadow-xl hover:shadow-pink-500/25">
           <h2 className="text-2xl font-bold text-pink-400 mb-4">My Heart's Message to You 💕</h2>
           <p className="text-lg leading-relaxed text-pink-100 mb-4">
             Every day with you feels like a dream come true. Your smile lights up my world, and your laugh is the
@@ -154,17 +158,9 @@ export default function HomePage() {
           <div className="text-right italic text-pink-200">
             With all my love,
             <br />
-            <span className="font-bold text-pink-400">Your Forever Valentine 💖</span>
+            <span className="font-bold text-pink-400">Youssef 💖</span>
           </div>
         </div>
-
-        {/* Explore Button */}
-        <button
-          className="bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-pink-500/25"
-          onClick={() => window.dispatchEvent(new CustomEvent("navigate", { detail: "about-her" }))}
-        >
-          Explore More About You
-        </button>
       </div>
     </div>
   )

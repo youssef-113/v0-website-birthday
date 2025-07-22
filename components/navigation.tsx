@@ -9,12 +9,12 @@ export default function Navigation({ currentPage, setCurrentPage }: NavigationPr
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-lg px-4 py-3">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold text-pink-400">❤️ For My Love</h1>
+        <h1 className="text-xl font-bold text-pink-400">❤️ Youssef & Sooy</h1>
         <ul className="flex space-x-4 md:space-x-8">
           {[
             { id: "home", label: "Home" },
-            { id: "about-her", label: "About Her" },
-            { id: "about-us", label: "About Us" },
+            { id: "about-her", label: "Calesy" },
+            { id: "about-us", label: "US" },
           ].map((item) => (
             <li key={item.id}>
               <button

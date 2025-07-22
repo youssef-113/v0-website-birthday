@@ -38,12 +38,27 @@
   }
 }
 
+@keyframes animateIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .animate-float-up {
   animation: float-up 8s linear forwards;
 }
 
 .animate-heart-explode {
   animation: heart-explode 1s ease-out forwards;
+}
+
+.animate-in {
+  animation: animateIn 0.8s ease forwards;
 }
 
 .cursor-heart {

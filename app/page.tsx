@@ -22,7 +22,9 @@ export default function BirthdayWebsite() {
       setIsLoading(false)
     }, 3000)
 
-    return () => clearTimeout(timer)
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   const createHeartExplosion = (x: number, y: number) => {
@@ -53,9 +55,11 @@ export default function BirthdayWebsite() {
       <FloatingLetters />
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
-      {currentPage === "home" && <HomePage />}
-      {currentPage === "about-her" && <AboutHer />}
-      {currentPage === "about-us" && <AboutUs />}
+      <div className="relative">
+        {currentPage === "home" && <HomePage />}
+        {currentPage === "about-her" && <AboutHer />}
+        {currentPage === "about-us" && <AboutUs />}
+      </div>
 
       {explosions.map((explosion) => (
         <HeartExplosion key={explosion.id} x={explosion.x} y={explosion.y} />
