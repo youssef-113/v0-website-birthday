@@ -79,7 +79,7 @@ export default function HomePage() {
           Happy 20th Birthday
         </h1>
 
-        <h2 className="text-3xl md:text-4xl text-pink-400 mb-12">My Beautiful Princess</h2>
+        <h2 className="text-3xl md:text-4xl text-pink-400 mb-12">My Beautiful Princess So 😍</h2>
 
         {/* Birth Date Card */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
@@ -87,14 +87,14 @@ export default function HomePage() {
             <div className="text-lg text-pink-200 mb-2">Born on</div>
             <div className="text-2xl font-bold text-white mb-1">July 23, 2005</div>
             <div className="text-md text-pink-300">Saturday</div>
-            <div className="text-lg text-pink-400 mt-2">♌ Leo</div>
+            <div className="text-lg text-pink-400 mt-2">Leo ♌</div>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 flex-1 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25">
             <div className="text-lg text-pink-200 mb-2">Moon Phase</div>
             <div className="text-3xl mb-1">🌖</div>
             <div className="text-xl font-bold text-white mb-1">Waning Gibbous</div>
-            <div className="text-md text-pink-300">Born under a mystical moon ✨</div>
+            <div className="text-md text-pink-300">Born under a Waning Gibbous Moon</div>
           </div>
         </div>
 
@@ -149,7 +149,7 @@ export default function HomePage() {
           <p className="text-lg leading-relaxed text-pink-100 mb-4">
             Every day with you feels like a dream come true. Your smile lights up my world, and your laugh is the
             sweetest melody I've ever heard. On this special day, I want you to know that you mean everything to me.
-            You're not just my girlfriend, you're my best friend, my inspiration, and my greatest love.
+            You're not just my girlfriend, you're my best friend, my inspiration, and my greatest love, my feature Wife.
           </p>
           <p className="text-lg leading-relaxed text-pink-100 mb-6">
             I hope this new year of your life brings you all the happiness, love, and dreams that your beautiful heart
