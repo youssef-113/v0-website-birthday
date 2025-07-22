@@ -9,8 +9,27 @@ export default function HomePage() {
     hours: 0,
     minutes: 0,
   })
+  const [showBirthdayAnimation, setShowBirthdayAnimation] = useState(false)
+  const [animatedHearts, setAnimatedHearts] = useState<Array<{ id: number; x: number; y: number; delay: number }>>([])
 
   useEffect(() => {
+    // Show birthday animation when component mounts
+    setShowBirthdayAnimation(true)
+
+    // Create animated hearts
+    const hearts = Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      delay: Math.random() * 2,
+    }))
+    setAnimatedHearts(hearts)
+
+    // Hide birthday animation after 4 seconds
+    const hideTimer = setTimeout(() => {
+      setShowBirthdayAnimation(false)
+    }, 4000)
+
     const calculateTimeLeft = () => {
       const birthday = new Date("2025-07-23T00:00:00").getTime()
       const now = new Date().getTime()
@@ -29,12 +48,50 @@ export default function HomePage() {
     calculateTimeLeft()
     const timer = setInterval(calculateTimeLeft, 60000)
 
-    return () => clearInterval(timer)
+    return () => {
+      clearTimeout(hideTimer)
+      clearInterval(timer)
+    }
   }, [])
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 pt-20">
-      <div className="text-center max-w-4xl mx-auto">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-20 relative overflow-hidden">
+      {/* Animated Hearts on Page Load */}
+      {showBirthdayAnimation && (
+        <div className="fixed inset-0 pointer-events-none z-20">
+          {animatedHearts.map((heart) => (
+            <div
+              key={heart.id}
+              className="absolute text-pink-400 animate-bounce opacity-80"
+              style={{
+                left: `${heart.x}%`,
+                top: `${heart.y}%`,
+                fontSize: `${Math.random() * 30 + 20}px`,
+                animationDelay: `${heart.delay}s`,
+                animationDuration: `${Math.random() * 2 + 1}s`,
+              }}
+            >
+              💖
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Birthday Animation Overlay */}
+      {showBirthdayAnimation && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-30 flex items-center justify-center animate-fade-in">
+          <div className="text-center">
+            <div className="text-8xl mb-6 animate-bounce">🎂</div>
+            <h1 className="text-6xl font-bold mb-4 bg-gradient-to-r from-pink-400 via-purple-400 to-yellow-400 bg-clip-text text-transparent animate-pulse">
+              Happy Birthday!
+            </h1>
+            <div className="text-4xl text-pink-300 animate-pulse">My Beautiful Princess 👸</div>
+            <div className="mt-6 text-2xl text-yellow-300">✨ 20 Years of Amazing You! ✨</div>
+          </div>
+        </div>
+      )}
+
+      <div className="text-center max-w-4xl mx-auto relative z-10">
         {/* Moon */}
         <div className="absolute top-24 right-8 w-20 h-20 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-full shadow-lg shadow-yellow-500/50 animate-pulse">
           <div className="absolute top-2 left-3 w-3 h-3 bg-yellow-100/50 rounded-full" />
@@ -49,7 +106,7 @@ export default function HomePage() {
 
         {/* Age Display */}
         <div className="mb-12">
-          <div className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent leading-none">
+          <div className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-pink-500 to-yellow-400 bg-clip-text text-transparent leading-none animate-pulse">
             20
           </div>
           <p className="text-xl text-pink-300 mt-4">Years of Amazing You</p>
@@ -63,7 +120,10 @@ export default function HomePage() {
             { label: "Hours", value: timeLeft.hours },
             { label: "Minutes", value: timeLeft.minutes },
           ].map((item) => (
-            <div key={item.label} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30">
+            <div
+              key={item.label}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-pink-500/30 hover:scale-105 transition-transform"
+            >
               <div className="text-4xl font-bold text-pink-400">{item.value}</div>
               <div className="text-sm text-pink-200 mt-2">{item.label}</div>
             </div>

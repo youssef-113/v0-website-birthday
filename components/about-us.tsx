@@ -87,11 +87,17 @@ export default function AboutUs() {
 
         {/* Memory Modal */}
         {selectedMemory && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-2xl w-full border border-pink-500/30">
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedMemory(null)}
+          >
+            <div
+              className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-2xl w-full border border-pink-500/30 relative transform transition-all duration-300 scale-100"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
                 onClick={() => setSelectedMemory(null)}
-                className="absolute top-4 right-4 text-white text-2xl hover:text-pink-400 transition-colors"
+                className="absolute top-4 right-4 text-white text-3xl hover:text-pink-400 transition-colors z-10 bg-black/30 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 ×
               </button>
@@ -105,9 +111,18 @@ export default function AboutUs() {
                 />
               </div>
 
-              <h4 className="text-xl font-semibold text-pink-300 mb-4">{selectedMemory.title}</h4>
+              <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-4 border border-pink-400/30 mb-4">
+                <div className="flex items-center mb-3">
+                  <div className="text-2xl mr-3">🌟</div>
+                  <h4 className="text-xl font-semibold text-pink-300">{selectedMemory.title}</h4>
+                </div>
+              </div>
 
-              <div className="bg-pink-500/20 rounded-2xl p-6">
+              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-6 border border-purple-400/30">
+                <div className="flex items-center mb-4">
+                  <div className="text-2xl mr-3">💖</div>
+                  <h3 className="text-lg font-semibold text-purple-300">Our Memory</h3>
+                </div>
                 <p className="text-lg leading-relaxed text-pink-100">{selectedMemory.note}</p>
               </div>
             </div>
