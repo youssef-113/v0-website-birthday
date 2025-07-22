@@ -6,79 +6,39 @@ import Image from "next/image"
 const photos = [
   {
     src: "/images/photo1.jpg",
-    note: "Your radiant smile at the beach - this moment captured my heart all over again! The way you light up every scene makes me fall in love with you more each day. 🌊💕",
+    note: "Your radiant smile at the beach - this moment captured my heart all over again! 🌊💕",
   },
   {
     src: "/images/photo2.jpg",
-    note: "The way you blow kisses makes my heart skip a beat every single time! Your playful spirit and sweet gestures are what make you absolutely irresistible. 😘✨",
+    note: "The way you blow kisses makes my heart skip a beat every single time! 😘✨",
   },
   {
     src: "/images/photo3.jpg",
-    note: "Your elegance and grace shine through in every photo. You're absolutely stunning and carry yourself like the queen you truly are! 🌟👑",
+    note: "Your elegance and grace shine through in every photo. You're absolutely stunning! 🌟",
   },
   {
     src: "/images/photo4.jpg",
-    note: "Celebrating you is my favorite thing to do! Happy Birthday my princess! Every moment with you feels like a celebration of love and happiness. 🎉👑",
+    note: "Celebrating you is my favorite thing to do! Happy Birthday my princess! 🎉👑",
   },
   {
     src: "/images/photo5.jpg",
-    note: "20 years of you being amazing! Here's to many more beautiful years together filled with love, laughter, and endless adventures! 🎂💖",
+    note: "20 years of you being amazing! Here's to many more beautiful years together! 🎂💖",
   },
   {
     src: "/images/photo6.jpg",
-    note: "Sunset kisses with you are pure magic. You make every moment special and turn ordinary days into extraordinary memories! 🌅💋",
+    note: "Sunset kisses with you are pure magic. You make every moment special! 🌅💋",
   },
   {
     src: "/images/photo7.jpg",
-    note: "Your beauty radiates from within and lights up the whole beach! You have this incredible ability to make everything around you more beautiful. 🏖️✨",
+    note: "Your beauty radiates from within and lights up the whole beach! 🏖️✨",
   },
   {
     src: "/images/photo8.jpg",
-    note: "Every wave pales in comparison to the waves of love I feel for you! Your presence by the ocean creates the most perfect harmony. 🌊💕",
+    note: "Every wave pales in comparison to the waves of love I feel for you! 🌊💕",
   },
   {
     src: "/images/photo9.jpg",
-    note: "That shy smile of yours melts my heart every single time! You're perfect in every way, and your gentle nature makes you even more beautiful. 😊💖",
-  },
-  {
-    src: "/images/photo10.jpg",
-    note: "Like an angel walking on earth! Your white dress flowing in the ocean breeze makes you look absolutely divine. You take my breath away every single day. 👼🤍",
-  },
-  {
-    src: "/images/photo11.jpg",
-    note: "Golden hour was made for you, my love! The way the sunset light kisses your face shows the world how truly magical you are. You're my golden treasure. 🌅✨",
-  },
-  {
-    src: "/images/photo12.jpg",
-    note: "Effortlessly beautiful and naturally stunning! Even with sunglasses on, your inner light shines so bright. You're my sunshine on every cloudy day. 😎☀️",
-  },
-  {
-    src: "/images/photo13.jpg",
-    note: "Elegance personified! You look like royalty in this beautiful abaya. Your grace and poise make you stand out in every crowd. You're my queen forever. 👸🖤",
-  },
-  {
-    src: "/images/photo14.jpg",
-    note: "That sweet kiss you're blowing melts my heart completely! Your playful and loving nature makes every day with you feel like a beautiful dream. 💋💙",
-  },
-  {
-    src: "/images/photo15.jpg",
-    note: "Beach goddess in blue! You look absolutely stunning sitting by the ocean. The way you pose so naturally shows your confidence and beauty. 💙🏖️",
-  },
-  {
-    src: "/images/photo16.jpg",
-    note: "Sophisticated and stylish! Your fashion sense is impeccable, but it's your beautiful soul that truly makes you shine from within. 🕶️✨",
-  },
-  {
-    src: "/images/photo17.jpg",
-    note: "Desert rose in full bloom! Your beauty against the sandy backdrop creates the most perfect picture. You're like a precious gem in every setting. 🌹🏜️",
-  },
-  {
-    src: "/images/photo18.jpg",
-    note: "City lights can't compete with your glow! You look absolutely radiant in this evening shot. You light up my world brighter than any skyline. 🌃✨",
-  },
-  {
-    src: "/images/photo19.jpg",
-    note: "Peace, love, and pure beauty! Your victory sign and sweet smile show your joyful spirit. You bring peace and happiness to my heart every day. ✌️💕",
+    note: "That shy smile of yours melts my heart every single time! You're perfect! 😊💖",
   },
 ]
 
@@ -117,17 +77,11 @@ export default function AboutHer() {
 
         {/* Modal */}
         {selectedPhoto && (
-          <div
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedPhoto(null)}
-          >
-            <div
-              className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-2xl w-full border border-pink-500/30 relative transform transition-all duration-300 scale-100"
-              onClick={(e) => e.stopPropagation()}
-            >
+          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-2xl w-full border border-pink-500/30">
               <button
                 onClick={() => setSelectedPhoto(null)}
-                className="absolute top-4 right-4 text-white text-3xl hover:text-pink-400 transition-colors z-10 bg-black/30 rounded-full w-10 h-10 flex items-center justify-center"
+                className="absolute top-4 right-4 text-white text-2xl hover:text-pink-400 transition-colors"
               >
                 ×
               </button>
@@ -141,11 +95,7 @@ export default function AboutHer() {
                 />
               </div>
 
-              <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl p-6 border border-pink-400/30">
-                <div className="flex items-center mb-4">
-                  <div className="text-2xl mr-3">💕</div>
-                  <h3 className="text-xl font-semibold text-pink-300">My Note For You</h3>
-                </div>
+              <div className="bg-pink-500/20 rounded-2xl p-6">
                 <p className="text-lg leading-relaxed text-pink-100">{selectedPhoto.note}</p>
               </div>
             </div>
