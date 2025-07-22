@@ -23,6 +23,11 @@
     if (!window.process.env) {
       window.process.env = {} as any
     }
+
+    // Fix for fs module
+    if (!window.process.cwd) {
+      window.process.cwd = () => "/"
+    }
   }
 })()
 

@@ -5,8 +5,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Birthday Website",
-  description: "A special birthday website",
+  title: "Happy Birthday My Love ❤️",
+  description: "A special birthday celebration website",
   generator: "v0.dev",
 }
 

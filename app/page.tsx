@@ -10,6 +10,7 @@ import AboutHer from "@/components/about-her"
 import AboutUs from "@/components/about-us"
 import HeartBackground from "@/components/heart-background"
 import HeartExplosion from "@/components/heart-explosion"
+import FloatingLetters from "@/components/floating-letters"
 
 export default function BirthdayWebsite() {
   const [isLoading, setIsLoading] = useState(true)
@@ -34,7 +35,9 @@ export default function BirthdayWebsite() {
   }
 
   const handleClick = (e: React.MouseEvent) => {
-    createHeartExplosion(e.clientX, e.clientY)
+    if (e && e.clientX && e.clientY) {
+      createHeartExplosion(e.clientX, e.clientY)
+    }
   }
 
   if (isLoading) {
@@ -47,6 +50,7 @@ export default function BirthdayWebsite() {
       onClick={handleClick}
     >
       <HeartBackground />
+      <FloatingLetters />
       <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
       {currentPage === "home" && <HomePage />}
