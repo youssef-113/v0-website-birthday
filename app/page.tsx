@@ -1,0 +1,61 @@
+"use client"
+
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import LoadingScreen from "@/components/loading-screen"
+import Navigation from "@/components/navigation"
+import HomePage from "@/components/home-page"
+import AboutHer from "@/components/about-her"
+import AboutUs from "@/components/about-us"
+import HeartBackground from "@/components/heart-background"
+import HeartExplosion from "@/components/heart-explosion"
+
+export default function BirthdayWebsite() {
+  const [isLoading, setIsLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState("home")
+  const [explosions, setExplosions] = useState<Array<{ id: number; x: number; y: number }>>([])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  const createHeartExplosion = (x: number, y: number) => {
+    const id = Date.now()
+    setExplosions((prev) => [...prev, { id, x, y }])
+
+    setTimeout(() => {
+      setExplosions((prev) => prev.filter((explosion) => explosion.id !== id))
+    }, 1000)
+  }
+
+  const handleClick = (e: React.MouseEvent) => {
+    createHeartExplosion(e.clientX, e.clientY)
+  }
+
+  if (isLoading) {
+    return <LoadingScreen />
+  }
+
+  return (
+    <div
+      className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-x-hidden cursor-heart"
+      onClick={handleClick}
+    >
+      <HeartBackground />
+      <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
+
+      {currentPage === "home" && <HomePage />}
+      {currentPage === "about-her" && <AboutHer />}
+      {currentPage === "about-us" && <AboutUs />}
+
+      {explosions.map((explosion) => (
+        <HeartExplosion key={explosion.id} x={explosion.x} y={explosion.y} />
+      ))}
+    </div>
+  )
+}

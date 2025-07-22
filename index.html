@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="heart-loader">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+            </div>
+            <h2>Loading your special day...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" style="display: none;">
+        <ul>
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about-her" class="nav-link">About Her</a></li>
+            <li><a href="#about-us" class="nav-link">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <div class="heart-background"></div>
+        <div class="moon-phase"></div>
+        
+        <div class="home-content">
+            <h1 class="main-title">Happy 20th Birthday</h1>
+            <h2 class="subtitle">My Beautiful Princess</h2>
+            
+            <div class="age-display">
+                <div class="age-number">20</div>
+                <div class="age-text">Years of Amazing You</div>
+            </div>
+
+            <div class="countdown-container">
+                <div class="time-unit">
+                    <span class="time-number" id="months">0</span>
+                    <span class="time-label">Months</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="days">0</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="hours">0</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-number" id="minutes">0</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+            </div>
+
+            <div class="birthday-message">
+                <p>Today marks 20 incredible years of your beautiful existence. You light up every room you enter and make every day brighter just by being you. Happy Birthday, my love! 💕</p>
+            </div>
+
+            <button class="explore-btn" onclick="showSection('about-her')">Explore More About You</button>
+        </div>
+    </section>
+
+    <!-- About Her Page -->
+    <section id="about-her" class="page">
+        <div class="heart-background"></div>
+        <div class="page-content">
+            <h1>About My Beautiful Girl</h1>
+            
+            <div class="photo-gallery">
+                <div class="photo-card" data-note="Your radiant smile at the beach - this moment captured my heart all over again! 🌊💕">
+                    <img src="/images/photo1.jpg" alt="Beautiful moment">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="The way you blow kisses makes my heart skip a beat every single time! 😘✨">
+                    <img src="/images/photo2.jpg" alt="Sweet kiss">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="Your elegance and grace shine through in every photo. You're absolutely stunning! 🌟">
+                    <img src="/images/photo3.jpg" alt="Elegant pose">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="Celebrating you is my favorite thing to do! Happy Birthday my princess! 🎉👑">
+                    <img src="/images/photo4.jpg" alt="Birthday celebration">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="20 years of you being amazing! Here's to many more beautiful years together! 🎂💖">
+                    <img src="/images/photo5.jpg" alt="20th birthday">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="Sunset kisses with you are pure magic. You make every moment special! 🌅💋">
+                    <img src="/images/photo6.jpg" alt="Sunset moment">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="Your beauty radiates from within and lights up the whole beach! 🏖️✨">
+                    <img src="/images/photo7.jpg" alt="Beach beauty">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="Every wave pales in comparison to the waves of love I feel for you! 🌊💕">
+                    <img src="/images/photo8.jpg" alt="Ocean waves">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+                
+                <div class="photo-card" data-note="That shy smile of yours melts my heart every single time! You're perfect! 😊💖">
+                    <img src="/images/photo9.jpg" alt="Shy smile">
+                    <div class="card-overlay">
+                        <span>Click to see my note</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about-us" class="page">
+        <div class="heart-background"></div>
+        <div class="page-content">
+            <h1>Our Beautiful Story</h1>
+            
+            <div class="about-us-content">
+                <div class="video-card">
+                    <div class="card-content">
+                        <h3>Our Journey Together</h3>
+                        <div class="video-placeholder">
+                            <div class="play-button">▶</div>
+                            <p>Our special moments captured in time</p>
+                        </div>
+                        <div class="card-note">
+                            <p>Every moment with you feels like a fairytale. From our first meeting to this special day, you've made every second magical. I love how we laugh together, dream together, and grow together. You're not just my girlfriend, you're my best friend and my greatest love.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memory-cards">
+                    <div class="memory-card" data-note="Our first beach trip together - the day I knew you were the one for me! 🏖️💕">
+                        <img src="/images/photo6.jpg" alt="Beach memory">
+                        <div class="card-overlay">
+                            <span>Our Beach Adventures</span>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-card" data-note="Your happiness is contagious! This smile of yours can light up the darkest days! ✨😊">
+                        <img src="/images/photo1.jpg" alt="Happy moment">
+                        <div class="card-overlay">
+                            <span>Pure Joy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="memory-card" data-note="Celebrating life with you is the greatest gift. Here's to many more celebrations together! 🎉💖">
+                        <img src="/images/photo4.jpg" alt="Celebration">
+                        <div class="card-overlay">
+                            <span>Celebrations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="love-message">
+                    <h3>My Promise to You</h3>
+                    <p>On this special day, I promise to love you more each day, to support your dreams, to make you laugh when you're sad, and to celebrate every moment of joy with you. You've brought so much light into my life, and I can't wait to create more beautiful memories together. Happy 20th Birthday, my love! 💕</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="/placeholder.svg" alt="">
+            <div id="modal-note"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
