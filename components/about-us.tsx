@@ -102,11 +102,11 @@ export default function AboutUs() {
               onClick={() =>
                 handleVideoPlay(
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_2025-04-13_00-18-55-ozhSrrQayIBoyteoWtr56BV2YyagON.mp4",
-                  "/images/couple1.jpg",
+                  "/images/couple3.jpg",
                 )
               }
             >
-              <Image src="/images/couple1.jpg" alt="Video poster 1" fill className="object-cover" />
+              <Image src="/images/couple3.jpg" alt="Video poster 1" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                 <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
@@ -145,9 +145,9 @@ export default function AboutUs() {
             <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our Third Video</h3>
             <div
               className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
-              onClick={() => handleVideoPlay("/images/couple5.MP4", "/images/couple2.jpg")}
+              onClick={() => handleVideoPlay("/images/couple5.MP4", "/images/couple6.jpg")}
             >
-              <Image src="/images/couple2.jpg" alt="Video poster 3" fill className="object-cover" />
+              <Image src="/images/couple6.jpg" alt="Video poster 3" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
               <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
                 <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">

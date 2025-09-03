@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, type MouseEvent } from "react"
+import { useState, useEffect, useRef, type MouseEvent, type KeyboardEvent as ReactKeyboardEvent } from "react"
 import Image from "next/image"
 
 // Updated media array to include both photos and videos
@@ -184,6 +184,19 @@ export default function AboutHer() {
     }
   }, [selectedMedia])
 
+  // Touch swipe to close (mobile)
+  const touchStartY = useRef<number | null>(null)
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartY.current = e.touches[0]?.clientY ?? null
+  }
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartY.current == null) return
+    const endY = e.changedTouches[0]?.clientY ?? touchStartY.current
+    const delta = endY - touchStartY.current
+    if (delta > 80) setSelectedMedia(null)
+    touchStartY.current = null
+  }
+
   return (
     <div className="min-h-screen px-4 pt-24 pb-12">
       <div className="max-w-6xl mx-auto">
@@ -195,14 +208,22 @@ export default function AboutHer() {
           {media.map((item, index) => (
             <div
               key={index}
-              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-pink-500/30 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
+              className="group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-pink-500/30 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 focus:outline-none focus:ring-2 focus:ring-pink-400/60"
               onClick={() => setSelectedMedia(item)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e: ReactKeyboardEvent<HTMLDivElement>) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault()
+                  setSelectedMedia(item)
+                }
+              }}
             >
               <div
                 className={`${item.type === "video" ? "aspect-video" : "aspect-square"} relative overflow-hidden`}
               >
                 <Image
-                  src={item.type === "video" ? item.thumbnail || item.src : item.src}
+                  src={item.type === "video" ? item.thumbnail || "/images/OIP.webp" : item.src}
                   alt={`Media ${index + 1}`}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -229,6 +250,8 @@ export default function AboutHer() {
           <div
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedMedia(null)}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             <div
               className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-3xl w-full border border-pink-500/30 relative"
@@ -236,10 +259,10 @@ export default function AboutHer() {
             >
               <button
                 onClick={() => setSelectedMedia(null)}
-                className="absolute top-4 right-4 text-white text-2xl hover:text-pink-400 transition-colors z-10"
+                className="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-black/40 text-white grid place-items-center hover:bg-black/50 transition-colors"
                 aria-label="Close"
               >
-                ×
+                <span className="text-2xl leading-none">×</span>
               </button>
 
               <div className="rounded-2xl overflow-hidden mb-6">
@@ -250,8 +273,9 @@ export default function AboutHer() {
                       controls
                       autoPlay
                       preload="metadata"
-                      poster={selectedMedia.thumbnail}
+                      poster={selectedMedia.thumbnail ?? "/images/OIP.webp"}
                       className="w-full h-full object-contain"
+                      playsInline
                       crossOrigin="anonymous"
                     />
                   </div>
