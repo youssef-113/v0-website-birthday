@@ -273,7 +273,7 @@ export default function AboutHer() {
                       controls
                       autoPlay
                       preload="metadata"
-                      poster={selectedMedia.thumbnail ?? "/images/OIP.webp"}
+                      poster={selectedMedia.thumbnail ?? "/images/photo9.jpg"}
                       className="w-full h-full object-contain"
                       playsInline
                       crossOrigin="anonymous"
