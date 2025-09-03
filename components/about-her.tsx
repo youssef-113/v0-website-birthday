@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, type MouseEvent } from "react"
 import Image from "next/image"
 
 // Updated media array to include both photos and videos
@@ -169,6 +169,21 @@ export default function AboutHer() {
     thumbnail?: string
   } | null>(null)
 
+  // Close modal on ESC and lock body scroll while open
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedMedia(null)
+    }
+    if (selectedMedia) {
+      document.addEventListener("keydown", onKey)
+      document.body.style.overflow = "hidden"
+    }
+    return () => {
+      document.removeEventListener("keydown", onKey)
+      document.body.style.overflow = ""
+    }
+  }, [selectedMedia])
+
   return (
     <div className="min-h-screen px-4 pt-24 pb-12">
       <div className="max-w-6xl mx-auto">
@@ -183,7 +198,9 @@ export default function AboutHer() {
               className="group relative bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-pink-500/30 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25"
               onClick={() => setSelectedMedia(item)}
             >
-              <div className="aspect-square relative overflow-hidden">
+              <div
+                className={`${item.type === "video" ? "aspect-video" : "aspect-square"} relative overflow-hidden`}
+              >
                 <Image
                   src={item.type === "video" ? item.thumbnail || item.src : item.src}
                   alt={`Media ${index + 1}`}
@@ -209,11 +226,18 @@ export default function AboutHer() {
 
         {/* Modal */}
         {selectedMedia && (
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-3xl w-full border border-pink-500/30">
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedMedia(null)}
+          >
+            <div
+              className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 max-w-3xl w-full border border-pink-500/30 relative"
+              onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+            >
               <button
                 onClick={() => setSelectedMedia(null)}
                 className="absolute top-4 right-4 text-white text-2xl hover:text-pink-400 transition-colors z-10"
+                aria-label="Close"
               >
                 ×
               </button>
@@ -225,6 +249,8 @@ export default function AboutHer() {
                       src={selectedMedia.src}
                       controls
                       autoPlay
+                      preload="metadata"
+                      poster={selectedMedia.thumbnail}
                       className="w-full h-full object-contain"
                       crossOrigin="anonymous"
                     />

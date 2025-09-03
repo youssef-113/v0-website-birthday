@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef, useEffect, type MouseEvent } from "react"
 import Image from "next/image"
 
 const memories = [
@@ -35,9 +35,11 @@ export default function AboutUs() {
   const [selectedMemory, setSelectedMemory] = useState<{ src: string; title: string; note: string } | null>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
+  const [activePoster, setActivePoster] = useState<string | null>(null)
 
-  const handleVideoPlay = (videoUrl: string) => {
+  const handleVideoPlay = (videoUrl: string, posterUrl?: string) => {
     setActiveVideo(videoUrl)
+    setActivePoster(posterUrl || null)
   }
 
   const handleVideoClose = () => {
@@ -46,6 +48,21 @@ export default function AboutUs() {
       videoRef.current.pause()
     }
   }
+
+  // Close modal on ESC and lock body scroll
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") handleVideoClose()
+    }
+    if (activeVideo) {
+      document.addEventListener("keydown", onKey)
+      document.body.style.overflow = "hidden"
+    }
+    return () => {
+      document.removeEventListener("keydown", onKey)
+      document.body.style.overflow = ""
+    }
+  }, [activeVideo])
 
   // Animation for cards on scroll
   useEffect(() => {
@@ -77,65 +94,69 @@ export default function AboutUs() {
 
         {/* Video Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          
+          {/* Card 1 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
             <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our First Video</h3>
-
             <div
-              className="aspect-video bg-black/50 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-black/40 transition-colors overflow-hidden relative"
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
               onClick={() =>
                 handleVideoPlay(
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_2025-04-13_00-18-55-ozhSrrQayIBoyteoWtr56BV2YyagON.mp4",
+                  "/images/couple1.jpg",
                 )
               }
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
-              <div className="text-center z-10">
-                <div className="text-6xl text-pink-400 mb-4 transform transition-transform hover:scale-125">▶</div>
-                <p className="text-pink-200">Watch our special moments</p>
+              <Image src="/images/couple1.jpg" alt="Video poster 1" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">Watch our special moments</p>
               </div>
             </div>
           </div>
 
+          {/* Card 2 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
             <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our Second Video</h3>
-
             <div
-              className="aspect-video bg-black/50 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-black/40 transition-colors overflow-hidden relative"
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
               onClick={() =>
                 handleVideoPlay(
                   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_2025-04-13_00-16-38-NffIuxi11hAtWBMYdtiEEVcUwr1khx.mp4",
+                  "/images/couple2.jpg",
                 )
               }
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
-              <div className="text-center z-10">
-                <div className="text-6xl text-pink-400 mb-4 transform transition-transform hover:scale-125">▶</div>
-                <p className="text-pink-200">More beautiful memories</p>
+              <Image src="/images/couple2.jpg" alt="Video poster 2" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">More beautiful memories</p>
               </div>
             </div>
-
           </div>
+
+          {/* Card 3 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
-            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">our Third Video</h3>
-
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our Third Video</h3>
             <div
-              className="aspect-video bg-black/50 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-black/40 transition-colors overflow-hidden relative"
-              onClick={() =>
-                handleVideoPlay(
-                  "/images/couple5.MP4",
-                )
-              }
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              onClick={() => handleVideoPlay("/images/couple5.MP4", "/images/couple2.jpg")}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
-              <div className="text-center z-10">
-                <div className="text-6xl text-pink-400 mb-4 transform transition-transform hover:scale-125">▶</div>
-                <p className="text-pink-200">More beautiful memories</p>
+              <Image src="/images/couple2.jpg" alt="Video poster 3" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">More beautiful memories</p>
               </div>
             </div>
-
           </div>
-          
         </div>
 
         {/* Photo Collage */}
@@ -209,11 +230,18 @@ export default function AboutUs() {
 
         {/* Video Modal */}
         {activeVideo && (
-          <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-            <div className="max-w-4xl w-full relative">
+          <div
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => handleVideoClose()}
+          >
+            <div
+              className="max-w-4xl w-full relative"
+              onClick={(e: MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+            >
               <button
                 onClick={handleVideoClose}
                 className="absolute -top-12 right-0 text-white text-3xl hover:text-pink-400 transition-colors z-50"
+                aria-label="Close"
               >
                 ×
               </button>
@@ -221,9 +249,11 @@ export default function AboutUs() {
               <video
                 ref={videoRef}
                 src={activeVideo}
+                poster={activePoster ?? undefined}
                 className="w-full rounded-xl"
                 controls
                 autoPlay
+                preload="metadata"
                 onEnded={handleVideoClose}
                 crossOrigin="anonymous"
               />
