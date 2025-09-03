@@ -157,7 +157,7 @@ const media = [
     type: "video",
     src: "../public/images/video20.mp4",
     note:"You are my sunshine on a cloudy day, my rock, and my everything! ☀️💞",
-  }
+  },
 
 ]
 
