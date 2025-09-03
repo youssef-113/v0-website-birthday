@@ -24,6 +24,11 @@ const memories = [
     title: "Pure Love",
     note: "Your smile is the reason I believe in love at first sight! 😊❤️",
   },
+  {
+    src: "../public/images/couple6.jpg",
+    title: "Together Forever",
+    note: "With you, every day feels like a fairytale come true! 🌟💑",
+  },
 ]
 
 export default function AboutUs() {
@@ -72,6 +77,7 @@ export default function AboutUs() {
 
         {/* Video Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          
           <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
             <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our First Video</h3>
 
@@ -108,7 +114,28 @@ export default function AboutUs() {
                 <p className="text-pink-200">More beautiful memories</p>
               </div>
             </div>
+
           </div>
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">our Third Video</h3>
+
+            <div
+              className="aspect-video bg-black/50 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-black/40 transition-colors overflow-hidden relative"
+              onClick={() =>
+                handleVideoPlay(
+                  "../public/images/couple5.MP4",
+                )
+              }
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+              <div className="text-center z-10">
+                <div className="text-6xl text-pink-400 mb-4 transform transition-transform hover:scale-125">▶</div>
+                <p className="text-pink-200">More beautiful memories</p>
+              </div>
+            </div>
+
+          </div>
+          
         </div>
 
         {/* Photo Collage */}

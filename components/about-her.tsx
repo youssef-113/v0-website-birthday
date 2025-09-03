@@ -51,6 +51,7 @@ const media = [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2025-03-25_02-48-41.jpg-bRfldX31bpYcZSXL0TVkHdnysvtsDn.jpeg",
     note: "Every video of you reminds me how lucky I am to have you in my life! ✨💕",
   },
+
   {
     type: "image",
     src: "/images/photo1.jpg",
@@ -94,8 +95,70 @@ const media = [
   {
     type: "image",
     src: "/images/photo9.jpg",
-    note: "That shy smile of yours melts my heart every single time! You're perfect! 😊💖",
+    note: "look at you, glowing with happiness and love! You are my sunshine! ☀️💖",
   },
+  {
+    type: "image",
+    src: "/images/photo11.jpg",
+    note: "Your smile is my favorite curve, and your eyes are my favorite stars! 🌟😊 ",
+  },
+
+  {
+    type: "video",
+    src: "/images/video10.mp4",
+    note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
+  },
+  {
+    type: "video",
+    src: "../public/images/video11.mp4",
+    note: "Your laughter is the sweetest sound in the world,I could listen to it forever! 🎶💞",
+  },
+  {
+    type: "video",
+    src: "../public/images/video12.mp4",
+    note: "The way you light up the room with your smile is simply magical! ✨😊",
+  },
+  {
+    type: "video",
+    src: "../public/images/video13.mp4",
+    note: "Every moment with you is a treasure I hold close to my heart! 💖🌟",
+  },
+  {
+    type: "video",
+    src: "../public/images/video14.mp4",
+    note: "Your beauty shines brighter than the stars in the night sky! 🌌💫",
+  },
+  {
+    type: "video",
+    src: "../public/images/video15.mp4",
+    note: "You are my sunshine on a cloudy day, my rock, and my everything! ☀️💞",
+  },
+  {
+    type: "video",
+    src: "../public/images/video16.mp4",
+    note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
+  },
+  {
+    type: "video",
+    src: "../public/images/video17.mp4",
+    note: "Looking at you is like a breath of fresh air - you take my breath away! 🌬️💖",
+  },
+  {
+    type: "video",
+    src: "../public/images/video18.mp4",
+    note: "Your smile is my favorite curve, and your eyes are my favorite stars! 🌟😊 ",
+  },
+  {
+    type: "video",
+    src: "../public/images/video19.mp4",
+    note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
+  },
+  {
+    type: "video",
+    src: "../public/images/video20.mp4",
+    note:"You are my sunshine on a cloudy day, my rock, and my everything! ☀️💞",
+  }
+
 ]
 
 export default function AboutHer() {
