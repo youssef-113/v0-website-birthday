@@ -157,7 +157,34 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
+
+{/*card 4*/ }
+<div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our third Video</h3>
+            <div
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              onClick={() =>
+                handleVideoPlay(
+                  "/images/video20.mp4",
+                  "/images/couple6.jpg",
+                )
+              }
+            >
+              <Image src="/images/couple6.jpg" alt="Video poster 2" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">More beautiful memories</p>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
+        
 
         {/* Photo Collage */}
         <div className="mb-12">

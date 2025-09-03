@@ -153,12 +153,6 @@ const media = [
     src: "/images/video19.mp4",
     note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
   },
-  {
-    type: "video",
-    src: "/images/video20.mp4",
-    note:"You are my sunshine on a cloudy day, my rock, and my everything! ☀️💞",
-  },
-
 ]
 
 export default function AboutHer() {
