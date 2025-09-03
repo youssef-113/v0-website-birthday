@@ -25,7 +25,7 @@ const memories = [
     note: "Your smile is the reason I believe in love at first sight! 😊❤️",
   },
   {
-    src: "../public/images/couple6.jpg",
+    src: "/images/couple6.jpg",
     title: "Together Forever",
     note: "With you, every day feels like a fairytale come true! 🌟💑",
   },
@@ -123,7 +123,7 @@ export default function AboutUs() {
               className="aspect-video bg-black/50 rounded-2xl flex items-center justify-center cursor-pointer hover:bg-black/40 transition-colors overflow-hidden relative"
               onClick={() =>
                 handleVideoPlay(
-                  "../public/images/couple5.MP4",
+                  "/images/couple5.MP4",
                 )
               }
             >
