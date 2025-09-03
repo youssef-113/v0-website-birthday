@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef, type MouseEvent, type KeyboardEvent as ReactKeyboardEvent } from "react"
+import { useState, useEffect, useRef, type MouseEvent, type KeyboardEvent as ReactKeyboardEvent, type TouchEvent as ReactTouchEvent } from "react"
 import Image from "next/image"
 
 // Updated media array to include both photos and videos
@@ -186,10 +186,10 @@ export default function AboutHer() {
 
   // Touch swipe to close (mobile)
   const touchStartY = useRef<number | null>(null)
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = (e: ReactTouchEvent<HTMLDivElement>) => {
     touchStartY.current = e.touches[0]?.clientY ?? null
   }
-  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchEnd = (e: ReactTouchEvent<HTMLDivElement>) => {
     if (touchStartY.current == null) return
     const endY = e.changedTouches[0]?.clientY ?? touchStartY.current
     const delta = endY - touchStartY.current
@@ -220,13 +220,13 @@ export default function AboutHer() {
               }}
             >
               <div
-                className={`${item.type === "video" ? "aspect-video" : "aspect-square"} relative overflow-hidden`}
+                className={`${item.type === "video" ? "aspect-video bg-black" : "aspect-square"} relative overflow-hidden`}
               >
                 <Image
-                  src={item.type === "video" ? item.thumbnail || "/images/OIP.webp" : item.src}
+                  src={item.type === "video" ? item.thumbnail || "/images/photo9.jpg" : item.src}
                   alt={`Media ${index + 1}`}
                   fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  className={`${item.type === "video" ? "object-contain" : "object-cover group-hover:scale-110"} transition-transform duration-300`}
                   unoptimized
                 />
                 {item.type === "video" && (
