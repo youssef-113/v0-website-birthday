@@ -8,13 +8,14 @@ import Navigation from "@/components/navigation"
 import HomePage from "@/components/home-page"
 import AboutHer from "@/components/about-her"
 import AboutUs from "@/components/about-us"
+import Login from "@/components/login"
 import HeartBackground from "@/components/heart-background"
 import HeartExplosion from "@/components/heart-explosion"
 import FloatingLetters from "@/components/floating-letters"
 
 export default function BirthdayWebsite() {
   const [isLoading, setIsLoading] = useState(true)
-  const [currentPage, setCurrentPage] = useState("home")
+  const [currentPage, setCurrentPage] = useState("login")
   const [explosions, setExplosions] = useState<Array<{ id: number; x: number; y: number }>>([])
 
   useEffect(() => {
@@ -53,9 +54,10 @@ export default function BirthdayWebsite() {
     >
       <HeartBackground />
       <FloatingLetters />
-      <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      {currentPage !== "login" && <Navigation currentPage={currentPage} setCurrentPage={setCurrentPage} />}
 
       <div className="relative">
+        {currentPage === "login" && <Login onLoginSuccess={() => setCurrentPage("home")} />}
         {currentPage === "home" && <HomePage />}
         {currentPage === "about-her" && <AboutHer />}
         {currentPage === "about-us" && <AboutUs />}

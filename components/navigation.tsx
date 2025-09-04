@@ -1,4 +1,5 @@
 "use client"
+import { useRouter } from 'next/navigation'
 
 interface NavigationProps {
   currentPage: string
@@ -6,6 +7,15 @@ interface NavigationProps {
 }
 
 export default function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
+  const router = useRouter()
+
+  const handleLogout = () => {
+    // Clear any authentication state here if needed
+    // For example: localStorage.removeItem('authToken')
+    
+    // Redirect to home page
+    router.push('/')
+  }
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-lg px-4 py-3">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
@@ -15,6 +25,7 @@ export default function Navigation({ currentPage, setCurrentPage }: NavigationPr
             { id: "home", label: "Home" },
             { id: "about-her", label: "Calesy" },
             { id: "about-us", label: "US" },
+            
           ].map((item) => (
             <li key={item.id}>
               <button
@@ -29,6 +40,14 @@ export default function Navigation({ currentPage, setCurrentPage }: NavigationPr
               </button>
             </li>
           ))}
+          <li>
+            <button
+              onClick={handleLogout}
+              className="px-3 py-2 rounded-full transition-all duration-300 text-pink-200 hover:text-white hover:bg-pink-500/20"
+            >
+              Logout
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
