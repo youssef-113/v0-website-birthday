@@ -155,6 +155,11 @@ export default function HomePage() {
             I hope this new year of your life brings you all the happiness, love, and dreams that your beautiful heart
             deserves. I can't wait to create more magical memories with you. Happy Birthday, my darling! ❤️
           </p>
+          <p className="text-lg leading-relaxed text-pink-100 mb-6">
+          With every moment we share, I fall for you even more deeply. 
+          You’ve filled my life with love, joy, and purpose, and I feel so blessed to walk this journey by your side.
+          I promise to always cherish you, protect you, and support your every dream.
+          </p>
           <div className="text-right italic text-pink-200">
             With all my love,
             <br />
