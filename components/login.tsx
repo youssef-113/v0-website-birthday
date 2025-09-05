@@ -26,7 +26,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-black/30 backdrop-blur-lg rounded-lg p-8 shadow-2xl">
         <h1 className="text-2xl font-bold text-center text-pink-400 mb-6">
-          ❤️ Login to the Celebration
+          Login to our world❤️ 
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
