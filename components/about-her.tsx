@@ -136,7 +136,7 @@ const media = [
   {
     type: "video",
     src: "/images/video16.mp4",
-    note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
+    note: "Your beauty steals my breath away, but it’s your heart that completely owns me.💞",
   },
   {
     type: "video",
@@ -151,7 +151,7 @@ const media = [
   {
     type: "video",
     src: "/images/video19.mp4",
-    note: "Your beauty is a gift from God, and I'm blessed to have you in my life! 🌟💞",
+    note: "Your beauty is heaven’s masterpiece, and every time I look at you, Having you in my life is the greatest blessing 🌟💞",
   },
 ]
 
