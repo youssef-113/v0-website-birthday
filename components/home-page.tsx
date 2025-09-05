@@ -79,7 +79,7 @@ export default function HomePage() {
           Happy 20th Birthday
         </h1>
 
-        <h2 className="text-3xl md:text-4xl text-pink-400 mb-12">My Beautiful Princess So 😍</h2>
+        <h2 className="text-3xl md:text-4xl text-pink-400 mb-12">My Beautiful Princess Sooy 😍</h2>
 
         {/* Birth Date Card */}
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-12">
@@ -163,7 +163,7 @@ export default function HomePage() {
           <div className="text-right italic text-pink-200">
             With all my love,
             <br />
-            <span className="font-bold text-pink-400">Youssef 💖</span>
+            <span className="font-bold text-pink-400">Youssfy❤️</span>
           </div>
         </div>
       </div>
