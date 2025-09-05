@@ -15,7 +15,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (username === "soo" && password === "i love cats") {
+    if (username === "sooy" && password === "i love cats") {
       onLoginSuccess()
     } else {
       setError("Invalid username or password")
