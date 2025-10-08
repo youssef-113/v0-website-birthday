@@ -33,22 +33,19 @@ const media = [
   {
     type: "video",
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_2025-07-22_18-14-03-ty3TlNxrCVBmbubTTDwz9LNPXJi9qu.mp4",
-    thumbnail:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2025-06-29_16-39-56.jpg-edMXOMZDnNvUDDELDO675Qlv4Qk8I9.jpeg",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
     note: "Every moment with you is a treasure I'll cherish forever! 💕",
   },
   {
     type: "video",
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/instagram_video_story_1742856170549-qmnvrUsfnGoJqrh1tVCzL7cF4qWVJM.mp4",
-    thumbnail:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-06-08%20at%2022.57.19_7cec9348.jpg-Erx0PIWs9DSk0A3nbMY9w7vljoe4x4.jpeg",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
     note: "Your laughter is the sweetest melody I've ever heard! 🎵💖",
   },
   {
     type: "video",
     src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/AQOxUSZfqeIJuyjcXHPB2yK67c0b1L_FXZgHO5I33f-LjiidBiIS1r068bhYmeTl-QlF3KmWGD-DEVBJAVcPUd5f8xjKVNkr9cwvi9k-VUj5fjTeT0JAOovNnzFsViqqIja0y7.mp4",
-    thumbnail:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/photo_2025-03-25_02-48-41.jpg-bRfldX31bpYcZSXL0TVkHdnysvtsDn.jpeg",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
     note: "Every video of you reminds me how lucky I am to have you in my life! ✨💕",
   },
 
@@ -153,6 +150,142 @@ const media = [
     src: "/images/video19.mp4",
     note: "Your beauty is heaven’s masterpiece, and every time I look at you, Having you in my life is the greatest blessing 🌟💞",
   },
+  {
+    type: "image",
+    src: "/images/photo10.jpg",
+    note: "In your eyes, I see the universe unfolding its most beautiful secrets. You're my everything! 🌌💫",
+  },
+  {
+    type: "image",
+    src: "/images/photo12.jpg",
+    note: "Your presence turns ordinary moments into extraordinary memories. Grateful for every second! ⏳💖",
+  },
+  {
+    type: "image",
+    src: "/images/photo13.jpg",
+    note: "Like a rare gem, your beauty captivates and your spirit inspires. Forever mesmerized! 💎✨",
+  },
+  {
+    type: "image",
+    src: "/images/couple1.jpg",
+    note: "Us together - the perfect blend of souls, creating our own beautiful story! 👫💕",
+  },
+  {
+    type: "image",
+    src: "/images/couple2.jpg",
+    note: "Two hearts beating as one, making every day an adventure of love! ❤️🤝",
+  },
+  {
+    type: "video",
+    src: "/images/highlights - 18090282787518145 (2).mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "Our journey together is the highlight of my life - every laugh, every moment, pure joy! 🎥🎉",
+  },
+  {
+    type: "image",
+    src: "/images/480262400_2977499079069442_7652786201795638247_n.jpg",
+    note: "Capturing your elegance in motion, every frame tells our love story! 📸💕",
+  },
+  {
+    type: "image",
+    src: "/images/480916717_2996135657205784_7054894599230855549_n.jpg",
+    note: "The way you move is poetry in motion - graceful, beautiful, unforgettable! 🌟🕺",
+  },
+  {
+    type: "video",
+    src: "/images/AQOxUSZfqeIJuyjcXHPB2yK67c0b1L_FXZgHO5I33f-LjiidBiIS1r068bhYmeTl-QlF3KmWGD-DEVBJAVcPUd5f8xjKVNkr9cwvi9k.mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "In your gaze, I find endless wonder and infinite love! 👀💖",
+  },
+  {
+    type: "image",
+    src: "/images/photo_2024-05-18_18-19-26.jpg",
+    note: "Your smile lights up my world like the morning sun! ☀️😊",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-06-19 at 18.31.53_99ace78f.jpg",
+    note: "Each photo is a testament to your incredible spirit and charm! ✨📖",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-18 at 03.54.18_824b6443.jpg",
+    note: "You make ordinary moments extraordinary with your presence! 🌈✨",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-18 at 03.54.18_b3e75816.jpg",
+    note: "Your beauty is timeless, your love eternal! ⏳💞",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.22_d65fcc35.jpg",
+    note: "In your arms, I've found my forever home! 🏡💕",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.23_b6ba232e.jpg",
+    note: "Your laughter is music to my soul! 🎵😄",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.24_2df001ba.jpg",
+    note: "Every day with you is a new adventure in love! 🗺️❤️",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.24_b379334b.jpg",
+    note: "Your eyes hold the secrets of the universe! 🌌🔍",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.25_346c1be8.jpg",
+    note: "You are my sunshine, my moon, my everything! ☀️🌙",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.25_b504496f.jpg",
+    note: "In your smile, I see all my dreams come true! 😊💭",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.26_0ffbb5ab.jpg",
+    note: "Your touch is magic, your love is real! 🪄❤️",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-07-19 at 00.11.26_42be3e13.jpg",
+    note: "Together we create our own fairy tale! 📖✨",
+  },
+  {
+    type: "image",
+    src: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "Your beauty rivals the stars in the night sky! 🌟⭐",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-09-03 at 15.16.27_649ef15f.mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "You make my heart dance with joy! 💃🎉",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-06 at 12.56.43_761cc308.mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "Every moment with you is a blessing! 🙏💖",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-06 at 12.56.58_9b97daea.mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "Your love is my greatest treasure! 💎❤️",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-07 at 14.12.37_3b13ca4f.mp4",
+    thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
+    note: "You are the art that colors my world! 🎨🌍",
+  },
 ]
 
 export default function AboutHer() {
@@ -217,7 +350,7 @@ export default function AboutHer() {
                 className={`${item.type === "video" ? "aspect-video bg-black" : "aspect-square"} relative overflow-hidden`}
               >
                 <Image
-                  src={item.type === "video" ? item.thumbnail || "/images/photo9.jpg" : item.src}
+                  src={item.type === "video" ? item.thumbnail || "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg" : item.src}
                   alt={`Media ${index + 1}`}
                   fill
                   className={`${item.type === "video" ? "object-contain" : "object-cover group-hover:scale-110"} transition-transform duration-300`}
@@ -267,7 +400,7 @@ export default function AboutHer() {
                       controls
                       autoPlay
                       preload="metadata"
-                      poster={selectedMedia.thumbnail ?? "/images/photo9.jpg"}
+                      poster={selectedMedia.thumbnail ?? "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg"}
                       className="w-full h-full object-contain"
                       playsInline
                       crossOrigin="anonymous"
