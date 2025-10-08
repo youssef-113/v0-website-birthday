@@ -166,16 +166,6 @@ const media = [
     note: "Like a rare gem, your beauty captivates and your spirit inspires. Forever mesmerized! 💎✨",
   },
   {
-    type: "image",
-    src: "/images/couple1.jpg",
-    note: "Us together - the perfect blend of souls, creating our own beautiful story! 👫💕",
-  },
-  {
-    type: "image",
-    src: "/images/couple2.jpg",
-    note: "Two hearts beating as one, making every day an adventure of love! ❤️🤝",
-  },
-  {
     type: "video",
     src: "/images/highlights - 18090282787518145 (2).mp4",
     thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
@@ -250,7 +240,7 @@ const media = [
   {
     type: "image",
     src: "/images/WhatsApp Image 2025-07-19 at 00.11.26_0ffbb5ab.jpg",
-    note: "Your touch is magic, your love is real! 🪄❤️",
+    note: "Your beauty rivals the stars in the night sky! 🌟⭐",
   },
   {
     type: "image",
@@ -260,7 +250,7 @@ const media = [
   {
     type: "image",
     src: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
-    note: "Your beauty rivals the stars in the night sky! 🌟⭐",
+    note: "Your touch is magic, your love is real! 🪄❤️",
   },
   {
     type: "video",
