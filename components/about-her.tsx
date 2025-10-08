@@ -274,7 +274,7 @@ const media = [
     type: "video",
     src: "/images/WhatsApp Video 2025-10-07 at 14.12.37_3b13ca4f.mp4",
     thumbnail: "/images/WhatsApp Image 2025-10-05 at 02.27.36_316c0dbd.jpg",
-    note: "You are the art that colors my world! 🎨🌍",
+    note: "Proud of you and your achievements!🎉",
   },
 ]
 
