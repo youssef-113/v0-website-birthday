@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from 'next/navigation'
 
 interface NavigationProps {
   currentPage: string
@@ -7,14 +6,12 @@ interface NavigationProps {
 }
 
 export default function Navigation({ currentPage, setCurrentPage }: NavigationProps) {
-  const router = useRouter()
-
   const handleLogout = () => {
     // Clear any authentication state here if needed
-    // For example: localStorage.removeItem('authToken')
+    localStorage.removeItem('isAuthenticated')
     
-    // Redirect to home page
-    router.push('/')
+    // Return to login page
+    setCurrentPage('login')
   }
   return (
     <nav className="fixed top-0 left-0 right-0 z-40 bg-black/30 backdrop-blur-lg px-4 py-3">

@@ -16,6 +16,9 @@ export default function Login({ onLoginSuccess }: LoginProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (username === "sooy" && password === "i love cats") {
+      // Set authentication state
+      localStorage.setItem('isAuthenticated', 'true')
+      setError("")
       onLoginSuccess()
     } else {
       setError("Invalid username or password")
