@@ -382,7 +382,36 @@ const media = [
     src: "/images/WhatsApp Video 2025-06-09 at 16.29.51_c00c704c.mp4",
     note: "Forever grateful for every second I get to spend loving you! 🙏💗",
   },
-  
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.29_b44e9011.mp4",
+    note: "Your smile turns ordinary moments into pure magic. You’re the most beautiful girl in my world. ✨💖",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.29_b75e17c4.mp4",
+    note: "Every glance from you feels like sunrise—warm, bright, and full of hope. ☀️💕",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.29_ba74bc0a.mp4",
+    note: "Your laughter is my favorite melody—sweet, soft, and forever in my heart. 🎶💞",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.30_5d6a5430.mp4",
+    note: "In your eyes I find peace, in your heart I find home. You are beautifully, wonderfully you. 🏡💗",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.30_9f5c5281.mp4",
+    note: "You’re the kind of beautiful that glows from within—kind, gentle, and unforgettable. 🌸✨",
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-10-30 at 18.25.30_dbb1f9e9.mp4",
+    note: "Every second with you is a blessing I’ll cherish forever. I love you endlessly. 💍💖",
+  },
 ]
 
 export default function AboutHer() {
