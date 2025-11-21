@@ -22,7 +22,7 @@ export default function Navigation({ currentPage, setCurrentPage }: NavigationPr
             { id: "home", label: "Home" },
             { id: "about-her", label: "Calesy" },
             { id: "about-us", label: "US" },
-            
+            { id: "gallery", label: "Gallery" },
           ].map((item) => (
             <li key={item.id}>
               <button

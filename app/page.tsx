@@ -8,6 +8,7 @@ import Navigation from "@/components/navigation"
 import HomePage from "@/components/home-page"
 import AboutHer from "@/components/about-her"
 import AboutUs from "@/components/about-us"
+import GalleryUpload from "@/components/gallery-upload"
 import Login from "@/components/login"
 import HeartBackground from "@/components/heart-background"
 import HeartExplosion from "@/components/heart-explosion"
@@ -61,6 +62,7 @@ export default function BirthdayWebsite() {
         {currentPage === "home" && <HomePage />}
         {currentPage === "about-her" && <AboutHer />}
         {currentPage === "about-us" && <AboutUs />}
+        {currentPage === "gallery" && <GalleryUpload />}
       </div>
 
       {explosions.map((explosion) => (
