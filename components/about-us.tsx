@@ -279,6 +279,75 @@ export default function AboutUs() {
             </div>
           </div>
 
+          {/* New Video Card 6 */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Precious Moments</h3>
+            <div
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              onClick={() =>
+                handleVideoPlay(
+                  "/images/WhatsApp Video 2026-02-18 at 6.51.40 PM.mp4",
+                  "/images/IMG_1957.JPG",
+                )
+              }
+            >
+              <Image src="/images/IMG_1957.JPG" alt="Video poster 6" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">Cherished memories together</p>
+              </div>
+            </div>
+          </div>
+
+          {/* New Video Card 7 */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Our Special Day</h3>
+            <div
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              onClick={() =>
+                handleVideoPlay(
+                  "/images/WhatsApp Video 2026-02-18 at 6.47.20 PM.mp4",
+                  "/images/IMG_1957.JPG",
+                )
+              }
+            >
+              <Image src="/images/IMG_1957.JPG" alt="Video poster 7" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">Relive our special moments</p>
+              </div>
+            </div>
+          </div>
+
+          {/* New Video Card 8 */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-pink-500/30 transform transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-pink-500/25 memory-card opacity-0 translate-y-10">
+            <h3 className="text-2xl font-semibold text-pink-300 mb-4 text-center">Together Forever</h3>
+            <div
+              className="aspect-video rounded-2xl overflow-hidden relative group cursor-pointer"
+              onClick={() =>
+                handleVideoPlay(
+                  "/images/WhatsApp Video 2026-02-18 at 6.46.45 PM.mp4",
+                  "/images/IMG_1957.JPG",
+                )
+              }
+            >
+              <Image src="/images/IMG_1957.JPG" alt="Video poster 8" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-70 group-hover:opacity-80 transition-opacity"></div>
+              <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+                <div className="w-16 h-16 rounded-full bg-pink-500/80 flex items-center justify-center shadow-lg shadow-pink-500/30">
+                  <span className="text-white text-2xl ml-1">▶</span>
+                </div>
+                <p className="text-pink-100 mt-3">Our beautiful journey</p>
+              </div>
+            </div>
+          </div>
+
         </div>
         
 
