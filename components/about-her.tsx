@@ -298,6 +298,11 @@ const media = [
     note: "Every photo of you is a masterpiece, but nothing compares to seeing you in person! 🎨✨",
   },
   {
+    type: "image",
+    src: "/images/IMG_1963 1.jpeg",
+    note: "You are beatuifual in my eyes more than you know❤️😍",
+  },
+  {
     type: "video",
     src: "/images/photo18.mp4",
     note: "Watching you live your life fills my heart with so much love and pride! 🎬💗",
@@ -412,6 +417,154 @@ const media = [
     src: "/images/WhatsApp Video 2025-10-30 at 18.25.30_dbb1f9e9.mp4",
     note: "Every second with you is a blessing I’ll cherish forever. I love you endlessly. 💍💖",
   },
+  
+  {
+    type: "video",
+    src: "/images/1000055768.mp4",
+    note: "Every second with you feels like a beautiful dream I never want to wake up from! 💫💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000055769.mp4",
+    note: "Your laughter is my favorite melody, and your smile is my favorite view! 🎶😊"
+  },
+  {
+    type: "video",
+    src: "/images/1000055772.mp4",
+    note: "In your eyes, I found my home and my heart's true calling. You complete me! 💑❤️"
+  },
+  {
+    type: "video",
+    src: "/images/1000061044.mp4",
+    note: "You're the missing piece I never knew I was searching for! 🧩💕"
+  },
+  {
+    type: "video",
+    src: "/images/1000061048.mp4",
+    note: "Every moment with you is a treasure I'll cherish forever! 💎✨"
+  },
+  {
+    type: "video",
+    src: "/images/1000061052.mp4",
+    note: "Your love is the most beautiful journey I've ever been on! 🌟💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000062473.mp4",
+    note: "You make my heart skip a beat with just one look! 💘"
+  },
+  {
+    type: "video",
+    src: "/images/1000067093.mp4",
+    note: "In a world full of moments, you're my favorite one! 🌍💫"
+  },
+  {
+    type: "video",
+    src: "/images/1000067095.mp4",
+    note: "Your love is the most precious gift I've ever received! 🎁💝"
+  },
+  {
+    type: "video",
+    src: "/images/1000067116.mp4",
+    note: "With you, every day feels like a beautiful adventure! 🌈✨"
+  },
+  {
+    type: "video",
+    src: "/images/1000067117.mp4",
+    note: "Your smile lights up my world brighter than a thousand stars! ✨😊"
+  },
+  {
+    type: "video",
+    src: "/images/1000067118.mp4",
+    note: "You're the reason I believe in love at first sight, every single day! 👀💘"
+  },
+  {
+    type: "video",
+    src: "/images/1000067119.mp4",
+    note: "My heart belongs to you, today and always! 💝"
+  },
+  {
+    type: "video",
+    src: "/images/1000067120.mp4",
+    note: "You're my favorite notification, my favorite hello, and my hardest goodbye! 📱💕"
+  },
+  {
+    type: "video",
+    src: "/images/1000070421.mp4",
+    note: "Every love story is beautiful, but ours is my favorite! 📖💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000070422.mp4",
+    note: "You're the dream I never want to wake up from! 🌙✨"
+  },
+  {
+    type: "video",
+    src: "/images/1000070423.mp4",
+    note: "Your love is the best part of my day, every day! 🌞💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000070431.mp4",
+    note: "You're the reason I believe in soulmates! 💑💫"
+  },
+  {
+    type: "video",
+    src: "/images/1000070432.mp4",
+    note: "My heart skips a beat every time I see you! 💓"
+  },
+  {
+    type: "video",
+    src: "/images/1000074310.mp4",
+    note: "You're my favorite notification and my sweetest dream! 💌💤"
+  },
+  {
+    type: "video",
+    src: "/images/1000074314.mp4",
+    note: "Your love is the best adventure I've ever been on! 🌍💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000074378.mp4",
+    note: "You're the missing piece to my puzzle! 🧩❤️"
+  },
+  {
+    type: "video",
+    src: "/images/1000074382.mp4",
+    note: "Every moment with you is a memory I'll cherish forever! 📸💝"
+  },
+  {
+    type: "video",
+    src: "/images/1000074390.mp4",
+    note: "You make my heart smile in ways I never thought possible! 😊💖"
+  },
+  {
+    type: "video",
+    src: "/images/1000074394.mp4",
+    note: "Your love is the most beautiful thing that's ever happened to me! 🌸💕"
+  },
+  {
+    type: "video",
+    src: "/images/1000074398.mp4",
+    note: "You're my favorite hello and my hardest goodbye! 👋💔"
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-11-13 at 19.27.47_137938fd.mp4",
+    note: "Your love is the best gift I've ever received! 🎁💝"
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-11-13 at 19.27.48_17687ff9.mp4",
+    note: "You're the reason I believe in love at first sight! 👀💘"
+  },
+  {
+    type: "video",
+    src: "/images/WhatsApp Video 2025-11-13 at 19.27.48_3a2874f7.mp4",
+    note: "My heart belongs to you, today and always! 💖"
+  },
+
+  
 ]
 
 export default function AboutHer() {
@@ -775,3 +928,4 @@ export default function AboutHer() {
     </div>
   )
 }
+

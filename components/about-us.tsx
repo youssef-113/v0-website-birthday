@@ -64,6 +64,46 @@ const memories = [
     title: "Forever Yours",
     note: "In your arms is where I belong. I promise to love you today, tomorrow, and always! 🤗💞",
   },
+  {
+    src: "/images/IMG_1953 (2).JPG",
+    title: "Our First Glance",
+    note: "The moment our eyes first met, I knew my life would never be the same. You had me at hello. 👀💘",
+  },
+  {
+    src: "/images/IMG_1953.JPG",
+    title: "Timeless Connection",
+    note: "Some connections are timeless, just like the way my heart skips a beat every time I see you. ⏳💞",
+  },
+  {
+    src: "/images/IMG_1956 (2).JPG",
+    title: "Perfect Harmony",
+    note: "Together, we create a harmony more beautiful than any melody. You're my favorite duet. 🎶❤️",
+  },
+  {
+    src: "/images/IMG_1956.JPG",
+    title: "Endless Smiles",
+    note: "Your smile is my favorite thing to wake up to and the last thing I want to see before I sleep. 😊💝",
+  },
+  {
+    src: "/images/IMG_1957 (2).JPG",
+    title: "Shared Dreams",
+    note: "With you, I've found someone to share my dreams and build our future together. 🌠💑",
+  },
+  {
+    src: "/images/IMG_1957.JPG",
+    title: "Precious Moments",
+    note: "In your arms, I've found my home, my peace, and my greatest adventure. 🏡💕",
+  },
+  {
+    src: "/images/IMG_1960 1.jpeg",
+    title: "My Heart's Home",
+    note: "Every second with you is a precious gift I'll always treasure. Time stands still when we're together. ⏳💖",
+  },
+  {
+    src: "/images/IMG_2329.PNG",
+    title: "Eternal Love",
+    note: "I knew I wanted to spend eternity making memories with you. ⏳💖",
+  },
 ]
 
 export default function AboutUs() {
