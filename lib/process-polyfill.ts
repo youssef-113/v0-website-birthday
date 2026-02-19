@@ -3,7 +3,7 @@
 // before any module that might check it during initialization
 
 // Immediately invoked function to set process.versions.node
-;(() => {
+; (() => {
   if (typeof window !== "undefined") {
     // We're in the browser
     if (!window.process) {
@@ -11,12 +11,12 @@
     }
 
     if (!window.process.versions) {
-      window.process.versions = {} as any
+      ; (window.process as any).versions = {} as any
     }
 
     // Set a valid semver string if it's missing or empty
     if (!window.process.versions.node) {
-      window.process.versions.node = "18.0.0"
+      ; (window.process as any).versions.node = "18.0.0"
     }
 
     // Ensure process.env exists
@@ -31,4 +31,4 @@
   }
 })()
 
-export {} // Make this a module
+export { } // Make this a module

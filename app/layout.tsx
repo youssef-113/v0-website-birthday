@@ -21,11 +21,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/placeholder-logo.png" sizes="any" />
-        <link rel="apple-touch-icon" href="/placeholder-logo.png" />
-      </head>
+    <html lang="en" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   )
