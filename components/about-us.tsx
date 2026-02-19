@@ -65,24 +65,9 @@ const memories = [
     note: "In your arms is where I belong. I promise to love you today, tomorrow, and always! 🤗💞",
   },
   {
-    src: "/images/IMG_1953 (2).JPG",
-    title: "Our First Glance",
-    note: "The moment our eyes first met, I knew my life would never be the same. You had me at hello. 👀💘",
-  },
-  {
     src: "/images/IMG_1953.JPG",
     title: "Timeless Connection",
     note: "Some connections are timeless, just like the way my heart skips a beat every time I see you. ⏳💞",
-  },
-  {
-    src: "/images/IMG_1956 (2).JPG",
-    title: "Perfect Harmony",
-    note: "Together, we create a harmony more beautiful than any melody. You're my favorite duet. 🎶❤️",
-  },
-  {
-    src: "/images/IMG_1956.JPG",
-    title: "Endless Smiles",
-    note: "Your smile is my favorite thing to wake up to and the last thing I want to see before I sleep. 😊💝",
   },
   {
     src: "/images/IMG_1957 (2).JPG",
